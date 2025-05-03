@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lava Rápido do Bocão - Limpeza Automotiva Profissional</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #fbe9e7, #ffccbc);
+      font-family: 'Roboto', sans-serif;
+    }
+    .water-bubble {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: float 6s infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0.8; }
+      50% { opacity: 0.4; }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+    .hero-section {
+      background: url('https://i.imgur.com/daozcQS.png') no-repeat center center/cover;
+      color: white;
+      position: relative;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.7);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 1;
+    }
+    .hero-section > * {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+    .hero-text {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .whatsapp-btn {
+      background-color: #25D366;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .whatsapp-btn:hover {
+      background-color: #1ebe57;
+      transform: scale(1.05);
+    }
+    .map-container {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .section-title {
+      color: #bf360c;
+    }
+    .icon-orange {
+      color: #e65100;
+    }
+    header, footer {
+      background-color: #bf360c;
+    }
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      .hero-text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="relative overflow-x-hidden">
+
+  <!-- Water Bubbles -->
+  <div class="water-bubble w-12 h-12 top-10 left-10"></div>
+  <div class="water-bubble w-16 h-16 top-40 right-20"></div>
+  <div class="water-bubble w-10 h-10 bottom-20 left-30"></div>
+  <div class="water-bubble w-14 h-14 bottom-10 right-40"></div>
+
+  <!-- Header -->
+  <header class="text-white py-6 shadow-lg">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold">Lava Rápido do Bocão</h1>
+      <p class="mt-2 text-lg md:text-xl">Excelência em Limpeza Automotiva</p>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="hero-title">Bem-vindo ao Lava Rápido do Bocão</h2>
+      <p class="hero-text">
+        Há mais de 20 anos no mercado, o Lava Rápido do Bocão é referência em limpeza automotiva. Com confiança, qualidade e dedicação, transformamos seu veículo com cuidado e profissionalismo. Amamos carros e cuidamos do seu com dedicação e qualidade.
+      </p>
+      <a href="https://wa.me/+5564999678129?text=Olá,%20quero%20agendar%20a%20lavagem%20do%20meu%20veículo" target="_blank" class="whatsapp-btn inline-flex items-center px-6 py-3 text-white font-semibold rounded-lg shadow-lg mt-6">
+        <i class="fab fa-whatsapp mr-2"></i> AGENDAR HORÁRIO
+      </a>
+    </div>
+  </section>
+
+  <!-- Sobre Nós -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold section-title mb-6">Sobre Nós</h2>
+      <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+        Fundado com o compromisso de oferecer serviços de alta qualidade, o Lava Rápido do Bocão usa equipamentos modernos e produtos de primeira linha para garantir a limpeza impecável do seu veículo. Nossa equipe altamente treinada trabalha com eficiência e atenção aos detalhes, proporcionando uma experiência única e confiável.
+      </p>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="py-16 bg-orange-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold section-title text-center mb-10">Nossos Serviços</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <i class="fas fa-car text-4xl icon-orange mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Lavagem Completa</h3>
+          <p class="text-gray-600">Limpeza interna e externa com produtos de alta qualidade, garantindo brilho e proteção.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <i class="fas fa-tint text-4xl icon-orange mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Polimento</h3>
+          <p class="text-gray-600">Restauração da pintura do veículo, removendo arranhões e devolvendo o brilho original.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <i class="fas fa-shield-alt text-4xl icon-orange mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Higienização Interna</h3>
+          <p class="text-gray-600">Limpeza profunda de estofados, carpetes e painel, eliminando sujeiras e odores.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Localização -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold section-title mb-6">Onde Estamos</h2>
+      <p class="text-lg text-gray-700 mb-6">Visite-nos na Av. Dom Pedro II, 59, Edéia - GO, 75940-000</p>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.068888614441!2d-49.93236618507367!3d-17.34619498809511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935fdd55a75499a3%3A0xbdbc0c47deeca504!2sAv.%20Dom%20Pedro%20II%2C%2059%2C%20Ed%C3%A9ia%20-%20GO!5e0!3m2!1spt-BR!2sbr!4v1667934567890"
+          width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="text-white py-6 text-center">
+    <p>© 2025 Lava Rápido do Bocão. Todos os direitos reservados.</p>
+    <p class="mt-2">Desenvolvido com <i class="fas fa-heart text-red-500"></i> para a excelência automotiva.</p>
+  </footer>
+
+  <!-- Bolhas Dinâmicas -->
+  <script>
+    for (let i = 0; i < 5; i++) {
+      const bubble = document.createElement('div');
+      bubble.className = 'water-bubble';
+      bubble.style.width = `${Math.random() * 20 + 10}px`;
+      bubble.style.height = bubble.style.width;
+      bubble.style.left = `${Math.random() * 100}vw`;
+      bubble.style.top = `${Math.random() * 100}vh`;
+      bubble.style.animationDuration = `${Math.random() * 4 + 4}s`;
+      document.body.appendChild(bubble);
+    }
+  </script>
+</body>
+</html>
